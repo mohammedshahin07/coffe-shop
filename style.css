@@ -1,0 +1,370 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#top{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(51, 6, 6);
+
+}
+h4{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+h4:hover{
+    color: rgb(89, 70, 11);
+}
+header{
+    width: 100%;
+   height: 60px;
+   background-color: rgb(92, 13, 13);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+header h1{
+    color: beige;
+        text-shadow: 2px 2px 5px rgb(242, 242, 242);
+        ;
+}
+
+header i{
+    font-size: xx-large;
+    padding: 20px;
+    text-shadow: 4px 5px 8px , rgb(35, 5, 5);
+    color: bisque;
+}
+header img
+{
+    border-radius: 50px;
+    text-shadow: 4px 5px 8px 5px,  rgb(243, 241, 241);
+}
+#images{
+    background-image: url("./img/coffee-2374466_1280.jpg");
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#images h1{
+       color: #271300;
+    position: absolute;
+    top: 448px;
+    right: 61%;
+    font-weight: 900;
+    text-shadow: 4px 5px 8px cornsilk;
+    font-size: 46px;
+    
+}
+
+.row{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(57, 20, 20);
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+
+}
+.col{
+    width: 250px;
+    height: 400px;
+    background-color:rgb(21, 13, 2);
+    border: 8px double rgb(230, 66, 66);
+}
+#box{
+    text-align: center;
+    padding-top: 20px;
+}
+.h2{
+  text-align: center;
+    padding-top: 10px;
+    color: brown;
+    margin-top: -24px;
+    
+  margin-top: -41px;
+    font-size: 52px;
+}
+
+
+/* animation */
+
+body {
+     background-color: #f3f3f3;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 50px;
+      color: #333;
+    }
+
+    .box {
+      width: 120px;
+      height: 120px;
+      margin: 20px auto;
+      background-color: #4caf50;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: 0.6s ease;
+    }
+
+    /* 2D Transform on Hover */
+    .box2d {
+      background-color:rgb(21, 13, 2);
+    }
+    .box2d:hover {
+      transform: rotate(45deg) scale(1.1);
+    }
+
+    /* 3D Transform */
+    .scene {
+      perspective: 600px;
+    }
+    .box3d {
+      background-color:rgb(21, 13, 2);
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      transition: transform 0.6s;
+    }
+    .box3d:hover {
+      transform: rotateY(180deg);
+    }
+
+    /* Transition */
+    .box-transition {
+      background-color:rgb(21, 13, 2);
+    }
+    .box-transition:hover {
+      background-color:rgb(21, 13, 2);
+      transform: scale(1.2);
+    }
+
+    /* Animation */
+    .box-animation {
+      background-color:rgb(21, 13, 2);
+      animation: move 2s infinite alternate;
+    }
+    @keyframes move {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(150px); }
+    }
+
+
+    /* box transtion all */
+
+    /* Unified box transition for all .col */
+#box .col {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+#box .col:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+
+#box .col {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+#box .col:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+#box .col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* peeeeeeeeeeeeee */
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-back {
+  background-color: #301c1c;
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.flip-back h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #f5c16c;
+}
+
+.flip-back p {
+  font-size: 14px;
+  color: #fddfb1;
+  text-align: center;
+}
+
+
+
+/* footer */
+footer {
+  background-color: #3e1e1e;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #f5c16c;
+}
+
+.footer-container p {
+  font-size: 14px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #e0c7b3;
+}
+
+.social-icons {
+  margin: 15px 0;
+}
+
+.social-icons a {
+  color: #f5c16c;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+footer .copyright {
+  font-size: 12px;
+  color: #c9a98f;
+  margin-top: 20px;
+}
+
+
+/* conatct section */
+
+#contact {
+  background-color: #f3e7df;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #3e1e1e;
+}
+
+#contact p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #5a3d2b;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #c1a88b;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #a27035;
+}
+
+.contact-form button {
+  background-color: #3e1e1e;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #5a3d2b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
